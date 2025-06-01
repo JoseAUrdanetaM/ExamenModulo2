@@ -30,12 +30,12 @@
         {
             panel1 = new Panel();
             panel5 = new Panel();
-            button12 = new Button();
-            button11 = new Button();
-            button10 = new Button();
+            Exit = new Button();
+            Reset = new Button();
+            NewGame = new Button();
             panel4 = new Panel();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            labelPlayerX = new TextBox();
+            labelPlayerO = new TextBox();
             label1 = new Label();
             label2 = new Label();
             panel3 = new Panel();
@@ -71,67 +71,69 @@
             // panel5
             // 
             panel5.BorderStyle = BorderStyle.Fixed3D;
-            panel5.Controls.Add(button12);
-            panel5.Controls.Add(button11);
-            panel5.Controls.Add(button10);
+            panel5.Controls.Add(Exit);
+            panel5.Controls.Add(Reset);
+            panel5.Controls.Add(NewGame);
             panel5.Location = new Point(475, 221);
             panel5.Name = "panel5";
             panel5.Size = new Size(294, 158);
             panel5.TabIndex = 7;
             // 
-            // button12
+            // Exit
             // 
-            button12.Location = new Point(150, 83);
-            button12.Name = "button12";
-            button12.Size = new Size(129, 59);
-            button12.TabIndex = 2;
-            button12.Text = "Exit";
-            button12.UseVisualStyleBackColor = true;
+            Exit.Location = new Point(150, 83);
+            Exit.Name = "Exit";
+            Exit.Size = new Size(129, 59);
+            Exit.TabIndex = 2;
+            Exit.Text = "Exit";
+            Exit.UseVisualStyleBackColor = true;
+            Exit.Click += Exit_Click;
             // 
-            // button11
+            // Reset
             // 
-            button11.Location = new Point(13, 83);
-            button11.Name = "button11";
-            button11.Size = new Size(129, 59);
-            button11.TabIndex = 1;
-            button11.Text = "Reset";
-            button11.UseVisualStyleBackColor = true;
+            Reset.Location = new Point(13, 83);
+            Reset.Name = "Reset";
+            Reset.Size = new Size(129, 59);
+            Reset.TabIndex = 1;
+            Reset.Text = "Reset";
+            Reset.UseVisualStyleBackColor = true;
+            Reset.Click += Reset_Click;
             // 
-            // button10
+            // NewGame
             // 
-            button10.Location = new Point(13, 18);
-            button10.Name = "button10";
-            button10.Size = new Size(266, 59);
-            button10.TabIndex = 0;
-            button10.Text = "New Game";
-            button10.UseVisualStyleBackColor = true;
+            NewGame.Location = new Point(13, 18);
+            NewGame.Name = "NewGame";
+            NewGame.Size = new Size(266, 59);
+            NewGame.TabIndex = 0;
+            NewGame.Text = "New Game";
+            NewGame.UseVisualStyleBackColor = true;
+            NewGame.Click += NewGame_Click;
             // 
             // panel4
             // 
             panel4.BorderStyle = BorderStyle.Fixed3D;
-            panel4.Controls.Add(textBox2);
-            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(labelPlayerX);
+            panel4.Controls.Add(labelPlayerO);
             panel4.Controls.Add(label1);
             panel4.Controls.Add(label2);
             panel4.Location = new Point(475, 33);
             panel4.Name = "panel4";
             panel4.Size = new Size(294, 162);
             panel4.TabIndex = 6;
-            panel4.Paint += panel4_Paint;
             // 
-            // textBox2
+            // labelPlayerX
             // 
-            textBox2.Location = new Point(141, 34);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(127, 27);
-            textBox2.TabIndex = 3;
+            labelPlayerX.Location = new Point(141, 34);
+            labelPlayerX.Name = "labelPlayerX";
+            labelPlayerX.Size = new Size(127, 27);
+            labelPlayerX.TabIndex = 3;
             // 
-            // textBox1
+            // labelPlayerO
             // 
-            textBox1.Location = new Point(141, 94);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(127, 27);
-            textBox1.TabIndex = 2;
+            labelPlayerO.Location = new Point(141, 94);
+            labelPlayerO.Name = "labelPlayerO";
+            labelPlayerO.Size = new Size(127, 27);
+            labelPlayerO.TabIndex = 2;
             // 
             // label1
             // 
@@ -175,19 +177,21 @@
             // 
             // button7
             // 
-            button7.Location = new Point(148, 234);
+            button7.Location = new Point(24, 234);
             button7.Name = "button7";
             button7.Size = new Size(108, 85);
             button7.TabIndex = 9;
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
-            button8.Location = new Point(24, 234);
+            button8.Location = new Point(148, 234);
             button8.Name = "button8";
             button8.Size = new Size(108, 85);
             button8.TabIndex = 8;
             button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // button9
             // 
@@ -196,22 +200,25 @@
             button9.Size = new Size(108, 85);
             button9.TabIndex = 10;
             button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
             // 
             // button4
             // 
-            button4.Location = new Point(148, 130);
+            button4.Location = new Point(24, 130);
             button4.Name = "button4";
             button4.Size = new Size(108, 85);
             button4.TabIndex = 6;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
-            button5.Location = new Point(24, 130);
+            button5.Location = new Point(148, 130);
             button5.Name = "button5";
             button5.Size = new Size(108, 85);
             button5.TabIndex = 5;
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -220,6 +227,7 @@
             button6.Size = new Size(108, 85);
             button6.TabIndex = 7;
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button2
             // 
@@ -228,14 +236,16 @@
             button2.Size = new Size(108, 85);
             button2.TabIndex = 3;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(24, 28);
+            button1.Location = new Point(24, 27);
             button1.Name = "button1";
             button1.Size = new Size(108, 85);
             button1.TabIndex = 2;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -244,6 +254,7 @@
             button3.Size = new Size(108, 85);
             button3.TabIndex = 4;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // panel2
             // 
@@ -264,7 +275,6 @@
             label3.Size = new Size(728, 50);
             label3.TabIndex = 1;
             label3.Text = "JUEGO TIC TAC TOC - WINDOWS FORMS";
-            label3.Click += label3_Click;
             // 
             // Form1
             // 
@@ -305,10 +315,10 @@
         private Button button4;
         private Button button5;
         private Button button6;
-        private Button button12;
-        private Button button11;
-        private Button button10;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private Button Exit;
+        private Button Reset;
+        private Button NewGame;
+        private TextBox labelPlayerX;
+        private TextBox labelPlayerO;
     }
 }
