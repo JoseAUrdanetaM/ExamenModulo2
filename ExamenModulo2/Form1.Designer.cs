@@ -30,9 +30,9 @@
         {
             panel1 = new Panel();
             panel5 = new Panel();
-            Exit = new Button();
-            Reset = new Button();
-            NewGame = new Button();
+            buttonExit = new Button();
+            buttonReset = new Button();
+            buttonNewGame = new Button();
             panel4 = new Panel();
             labelPlayerX = new TextBox();
             labelPlayerO = new TextBox();
@@ -71,43 +71,43 @@
             // panel5
             // 
             panel5.BorderStyle = BorderStyle.Fixed3D;
-            panel5.Controls.Add(Exit);
-            panel5.Controls.Add(Reset);
-            panel5.Controls.Add(NewGame);
+            panel5.Controls.Add(buttonExit);
+            panel5.Controls.Add(buttonReset);
+            panel5.Controls.Add(buttonNewGame);
             panel5.Location = new Point(475, 221);
             panel5.Name = "panel5";
             panel5.Size = new Size(294, 158);
             panel5.TabIndex = 7;
             // 
-            // Exit
+            // buttonExit
             // 
-            Exit.Location = new Point(150, 83);
-            Exit.Name = "Exit";
-            Exit.Size = new Size(129, 59);
-            Exit.TabIndex = 2;
-            Exit.Text = "Exit";
-            Exit.UseVisualStyleBackColor = true;
-            Exit.Click += Exit_Click;
+            buttonExit.Location = new Point(150, 83);
+            buttonExit.Name = "buttonExit";
+            buttonExit.Size = new Size(129, 59);
+            buttonExit.TabIndex = 2;
+            buttonExit.Text = "Exit";
+            buttonExit.UseVisualStyleBackColor = true;
+            buttonExit.Click += Exit_Click;
             // 
-            // Reset
+            // buttonReset
             // 
-            Reset.Location = new Point(13, 83);
-            Reset.Name = "Reset";
-            Reset.Size = new Size(129, 59);
-            Reset.TabIndex = 1;
-            Reset.Text = "Reset";
-            Reset.UseVisualStyleBackColor = true;
-            Reset.Click += Reset_Click;
+            buttonReset.Location = new Point(13, 83);
+            buttonReset.Name = "buttonReset";
+            buttonReset.Size = new Size(129, 59);
+            buttonReset.TabIndex = 1;
+            buttonReset.Text = "Reset";
+            buttonReset.UseVisualStyleBackColor = true;
+            buttonReset.Click += Reset_Click;
             // 
-            // NewGame
+            // buttonNewGame
             // 
-            NewGame.Location = new Point(13, 18);
-            NewGame.Name = "NewGame";
-            NewGame.Size = new Size(266, 59);
-            NewGame.TabIndex = 0;
-            NewGame.Text = "New Game";
-            NewGame.UseVisualStyleBackColor = true;
-            NewGame.Click += NewGame_Click;
+            buttonNewGame.Location = new Point(13, 18);
+            buttonNewGame.Name = "buttonNewGame";
+            buttonNewGame.Size = new Size(266, 59);
+            buttonNewGame.TabIndex = 0;
+            buttonNewGame.Text = "New Game";
+            buttonNewGame.UseVisualStyleBackColor = true;
+            buttonNewGame.Click += NewGame_Click;
             // 
             // panel4
             // 
@@ -125,15 +125,20 @@
             // 
             labelPlayerX.Location = new Point(141, 34);
             labelPlayerX.Name = "labelPlayerX";
+            labelPlayerX.ReadOnly = true;
             labelPlayerX.Size = new Size(127, 27);
             labelPlayerX.TabIndex = 3;
+            labelPlayerX.Text = "0";
+            labelPlayerX.TextChanged += labelPlayerX_TextChanged_1;
             // 
             // labelPlayerO
             // 
             labelPlayerO.Location = new Point(141, 94);
             labelPlayerO.Name = "labelPlayerO";
+            labelPlayerO.ReadOnly = true;
             labelPlayerO.Size = new Size(127, 27);
             labelPlayerO.TabIndex = 2;
+            labelPlayerO.Text = "0";
             // 
             // label1
             // 
@@ -315,9 +320,9 @@
         private Button button4;
         private Button button5;
         private Button button6;
-        private Button Exit;
-        private Button Reset;
-        private Button NewGame;
+        private Button buttonExit;
+        private Button buttonReset;
+        private Button buttonNewGame;
         private TextBox labelPlayerX;
         private TextBox labelPlayerO;
     }

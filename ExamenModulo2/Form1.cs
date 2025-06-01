@@ -21,7 +21,7 @@ namespace ExamenModulo2
         public void Score()
         {
             #region Player X
-            if (button1.Text == "x" && button2.Text == "x" && button3.Text == "x")
+            if (button1.Text == "X" && button2.Text == "X" && button3.Text == "X")
             {
                 button1.BackColor = Color.Green;
                 button2.BackColor = Color.Green;
@@ -33,7 +33,7 @@ namespace ExamenModulo2
                 Enable_False();
             }
 
-            if (button1.Text == "x" && button4.Text == "x" && button7.Text == "x")
+            if (button1.Text == "X" && button4.Text == "X" && button7.Text == "X") //Ok
             {
                 button1.BackColor = Color.Green;
                 button4.BackColor = Color.Green;
@@ -45,7 +45,7 @@ namespace ExamenModulo2
                 Enable_False();
             }
 
-            if (button1.Text == "x" && button5.Text == "x" && button9.Text == "x")
+            if (button1.Text == "X" && button5.Text == "X" && button9.Text == "X")
             {
                 button1.BackColor = Color.Green;
                 button5.BackColor = Color.Green;
@@ -57,7 +57,7 @@ namespace ExamenModulo2
                 Enable_False();
             }
 
-            if (button2.Text == "x" && button5.Text == "x" && button8.Text == "x")
+            if (button2.Text == "X" && button5.Text == "X" && button8.Text == "X")
             {
                 button2.BackColor = Color.Green;
                 button5.BackColor = Color.Green;
@@ -69,7 +69,7 @@ namespace ExamenModulo2
                 Enable_False();
             }
 
-            if (button3.Text == "x" && button6.Text == "x" && button9.Text == "x")
+            if (button3.Text == "X" && button6.Text == "X" && button9.Text == "X")
             {
                 button3.BackColor = Color.Green;
                 button6.BackColor = Color.Green;
@@ -81,7 +81,7 @@ namespace ExamenModulo2
                 Enable_False();
             }
 
-            if (button4.Text == "x" && button5.Text == "x" && button6.Text == "x")
+            if (button4.Text == "X" && button5.Text == "X" && button6.Text == "X")
             {
                 button4.BackColor = Color.Green;
                 button5.BackColor = Color.Green;
@@ -93,7 +93,7 @@ namespace ExamenModulo2
                 Enable_False();
             }
 
-            if (button7.Text == "x" && button8.Text == "x" && button9.Text == "x")
+            if (button7.Text == "X" && button8.Text == "X" && button9.Text == "X")
             {
                 button7.BackColor = Color.Green;
                 button8.BackColor = Color.Green;
@@ -105,7 +105,7 @@ namespace ExamenModulo2
                 Enable_False();
             }
 
-            if (button3.Text == "x" && button5.Text == "x" && button7.Text == "x")
+            if (button3.Text == "X" && button5.Text == "X" && button7.Text == "X")
             {
                 button3.BackColor = Color.Green;
                 button5.BackColor = Color.Green;
@@ -228,7 +228,7 @@ namespace ExamenModulo2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(checker == false)
+            if (checker == false)
             {
                 button1.Text = "X";
                 checker = true;
@@ -239,7 +239,7 @@ namespace ExamenModulo2
                 checker = false;
             }
             Score();
-            button1.Enabled= false;
+            button1.Enabled = false;
 
         }
 
@@ -256,7 +256,7 @@ namespace ExamenModulo2
                 checker = false;
             }
             Score();
-            button1.Enabled = false;
+            button2.Enabled = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -272,7 +272,7 @@ namespace ExamenModulo2
                 checker = false;
             }
             Score();
-            button1.Enabled = false;
+            button3.Enabled = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -288,7 +288,7 @@ namespace ExamenModulo2
                 checker = false;
             }
             Score();
-            button1.Enabled = false;
+            button5.Enabled = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -304,7 +304,7 @@ namespace ExamenModulo2
                 checker = false;
             }
             Score();
-            button1.Enabled = false;
+            button4.Enabled = false;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -320,7 +320,7 @@ namespace ExamenModulo2
                 checker = false;
             }
             Score();
-            button1.Enabled = false;
+            button6.Enabled = false;
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -336,7 +336,7 @@ namespace ExamenModulo2
                 checker = false;
             }
             Score();
-            button1.Enabled = false;
+            button8.Enabled = false;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -352,7 +352,7 @@ namespace ExamenModulo2
                 checker = false;
             }
             Score();
-            button1.Enabled = false;
+            button7.Enabled = false;
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -368,31 +368,97 @@ namespace ExamenModulo2
                 checker = false;
             }
             Score();
-            button1.Enabled = false;
+            button9.Enabled = false;
         }
 
         private void NewGame_Click(object sender, EventArgs e)
         {
-            button1.Enabled = true; 
-            button2.Enabled = true; 
-            button3.Enabled = true; 
-            button4.Enabled = true; 
-            button5.Enabled = true; 
-            button6.Enabled = true; 
-            button7.Enabled = true; 
-            button8.Enabled = true; 
-            button9.Enabled = true; 
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            button4.Enabled = true;
+            button5.Enabled = true;
+            button6.Enabled = true;
+            button7.Enabled = true;
+            button8.Enabled = true;
+            button9.Enabled = true;
 
+            button1.Text = "";
+            button2.Text = "";
+            button3.Text = "";
+            button4.Text = "";
+            button5.Text = "";
+            button6.Text = "";
+            button7.Text = "";
+            button8.Text = "";
+            button9.Text = "";
 
+            labelPlayerX.Text = "0";
+            labelPlayerO.Text = "0";
 
+            button1.BackColor = Color.White;
+            button2.BackColor = Color.White;
+            button3.BackColor = Color.White;
+            button4.BackColor = Color.White;
+            button5.BackColor = Color.White;
+            button6.BackColor = Color.White;
+            button7.BackColor = Color.White;
+            button8.BackColor = Color.White;
+            button9.BackColor = Color.White;
         }
 
         private void Reset_Click(object sender, EventArgs e)
         {
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            button4.Enabled = true;
+            button5.Enabled = true;
+            button6.Enabled = true;
+            button7.Enabled = true;
+            button8.Enabled = true;
+            button9.Enabled = true;
 
+            button1.Text = "";
+            button2.Text = "";
+            button3.Text = "";
+            button4.Text = "";
+            button5.Text = "";
+            button6.Text = "";
+            button7.Text = "";
+            button8.Text = "";
+            button9.Text = "";
+
+            buttonNewGame.Enabled = true;
+
+            button1.BackColor = Color.White;
+            button2.BackColor = Color.White;
+            button3.BackColor = Color.White;
+            button4.BackColor = Color.White;
+            button5.BackColor = Color.White;
+            button6.BackColor = Color.White;
+            button7.BackColor = Color.White;
+            button8.BackColor = Color.White;
+            button9.BackColor = Color.White;
         }
 
         private void Exit_Click(object sender, EventArgs e)
+        {
+            DialogResult iExit;
+            iExit = MessageBox.Show(
+                "Confirm if you want to exit", "Tic Tac Toc", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (iExit == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void labelPlayerX_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPlayerX_TextChanged_1(object sender, EventArgs e)
         {
 
         }
